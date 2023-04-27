@@ -1,19 +1,18 @@
 const express = require('express');
 
+const pokemonRouter = require('./router')
+
 var cors = require('cors')
 
 const app = express();
 
-app.use(cors())
+app.use(cors());
 
 const port = 8008;
 
-let jsonData = require('./pokefight.json');
+app.use('/pokemon', pokemonRouter )
 
-app.get('/pokemon', (req, res) => {
-    res.json(jsonData)
-});
 
 app.listen(port, () => {
-    console.log('Listening on port ${port}')
+    console.log(`Listening on port ${port}`)
 });
