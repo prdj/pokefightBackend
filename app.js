@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 
-const port = 8008;
+const port = 3000;
 
 app.use('/pokemon', pokemonRouter )
 
