@@ -1,7 +1,7 @@
 const pokemonData = require('./pokefight.json');
 
 exports.getPokemon = (req, res) => {
-    res.json(jsonData)
+    res.json(pokemonData)
 }
 
 exports.getPokemonById = (req, res) => {
